@@ -2,7 +2,7 @@ import logging
 import time
 import json
 from fastapi import FastAPI
-from fastapi.middleware import Middleware
+from starlette.middleware.base import BaseHTTPMiddleware
 from pprint import pformat
 
 logging.basicConfig(level=logging.DEBUG,  # Establecer el nivel de logging a DEBUG
@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG,  # Establecer el nivel de logging a DEB
                     handlers=[logging.StreamHandler()])  # Enviar los logs a la consola
 
 
-class LoggerMiddleware(Middleware):
+class LoggerMiddleware(BaseHTTPMiddleware):
 
     def __init__(self, app: FastAPI, debug_level: int = logging.DEBUG):
         super().__init__(app)

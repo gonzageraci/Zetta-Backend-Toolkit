@@ -3,14 +3,14 @@ import time
 import json
 from typing import Callable
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.middleware import Middleware
+from starlette.middleware.base import BaseHTTPMiddleware
 
 logging.basicConfig(level=logging.DEBUG,  # Establecer el nivel de logging a DEBUG
                     format='%(levelname)s - %(asctime)s - %(message)s', # Formato del mensaje
                     handlers=[logging.StreamHandler()])  # Enviar los logs a la consola
 
 
-class RateLimitMiddleware(Middleware):
+class RateLimitMiddleware(BaseHTTPMiddleware):
 
     def __init__(self, app: FastAPI, max_requests:int = 100, period:int = 60):
         super().__init__(app)
