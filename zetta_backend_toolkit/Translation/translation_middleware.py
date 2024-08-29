@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Request
-from fastapi.middleware import BaseHTTPMiddleware
+from fastapi.middleware import Middleware
 from googletrans import Translator
 
-class TranslationMiddleware(BaseHTTPMiddleware):
+class TranslationMiddleware(Middleware):
     def __init__(self, app: FastAPI, target_language: str = "en"):
         super().__init__(app)
         self.translator = Translator()
