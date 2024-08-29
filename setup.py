@@ -8,7 +8,7 @@ setup(
     description="Un toolkit Backend para FastAPI",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/gonzageraci/FastAPI-toolkit",
+    url="https://github.com/gonzageraci/Zetta-Backend-Toolkit",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
