@@ -14,9 +14,8 @@ class LoggerMiddleware(Middleware):
 
     def __init__(self, app: FastAPI, debug_level: int = logging.DEBUG):
         super().__init__(app)
-        if not self.logger:
-            self.logger = logging.getLogger(__name__)
-            self.logger.setLevel(logging.DEBUG)
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(debug_level)
 
     async def dispatch(self, request, call_next):
         """
