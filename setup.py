@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="zetta-backend-toolkit",
-    version="0.1.3",
+    version="0.1.4",
     author="Gonzalo Geraci",
     author_email="gonza.geraci@gmail.com",
     description="Un toolkit Backend para FastAPI",
