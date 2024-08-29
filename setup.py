@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="fastapi-toolkit",
+    name="zetta-backend-toolkit",
     version="0.1.0",
     author="Gonzalo Geraci",
     author_email="gonza.geraci@gmail.com",

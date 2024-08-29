@@ -1,1 +1,5 @@
 venv/
+zetta_backend_toolkit.egg-info/
+dist/
+build/
+.gitignore
