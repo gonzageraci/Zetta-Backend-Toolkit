@@ -10,7 +10,7 @@ You can install the package using pip:
 
 ```bash
 
-pip  install  fastapi-toolkit
+pip  install  zetta-backend-toolkit
 
 ```
 
@@ -22,7 +22,7 @@ To use the logging middleware, simply add it to your FastAPI application:
 
 ```python
 from fastapi import FastAPI
-from fastapi_toolkit.logger_middleware import LoggerMiddleware
+from zetta-backend-toolkit.logger_middleware import LoggerMiddleware
 
 app = FastAPI()
 
@@ -44,7 +44,7 @@ To limit the number of requests per IP:
 
 ```python
 from fastapi import FastAPI
-from fastapi_toolkit.rate_limit_middleware import RateLimitMiddleware
+from zetta-backend-toolkit.rate_limit_middleware import RateLimitMiddleware
 
 app = FastAPI()
 
@@ -60,7 +60,7 @@ async def read_root():
 To translate requests and responses using googletrans: 
 ```python
 from fastapi import FastAPI, Request
-from fastapi_toolkit.translation_middleware import TranslationMiddleware
+from zetta-backend-toolkit.translation_middleware import TranslationMiddleware
 
 app = FastAPI()
 
